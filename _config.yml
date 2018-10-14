@@ -4,8 +4,8 @@ highlighter:      rouge
 
 # Setup
 title:            'Pofay'
-tagline:          'Gian Carlo Gilos Blog on Software Development'
-description:      'This is where I put what I have learned'
+tagline:          ''
+description:      'Gian Carlo Gilos Blog on Learning Software Development'
 baseurl:          ''
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
@@ -30,6 +30,7 @@ disqus:
   shortname: pofay
 # Sidebar link settings
 sidebar_home_link:  true
+remote_theme: fongandrew/hydeout
 # sidebar_blog_link:  '/blog'   # By default, your home page is your blog
                                 # page. If you change your paginate_path,
                                 # set this to the root of the paginate_path

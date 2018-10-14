@@ -15,4 +15,7 @@ In the future this will become my *personal portfolio*.
 
 If you want to email me on something: gianCarlo.gilos@outlook.com
 
+My [Github Account][1] 
+
+[1]: https://github.com/Pofay
 
