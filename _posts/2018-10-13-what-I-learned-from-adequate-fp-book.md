@@ -4,7 +4,7 @@ title: "What Adequate Functional Programming in JS taught me"
 tags: [functional-programming, javascript]
 ---
 
-I'm one of those developers who actually got hooked on the new age fad of [Functional Programming][1].
+I'm one of those developers who actually got hooked on the new age fad of [Functional Programming][9].
 
 Aside from that alot of the experts in our industry (in terms of software craftsmanship) are actually learning and digging deeper 
 into the paradigm.
@@ -117,7 +117,9 @@ Using the `curry` function it becomes easier to use:
 For **Function Composition** I'm going to put it in the next post since it uses the techniques outlined here.
 
 
-With that if you don't understand what I've just outlined here, then I suggest you read the [book][3]. Its a really good read.
+What I've mentioned here are merely echoes of what the [book][3] contains. Its got more real examples than the ones I've outlined here. 
+
+So I suggest you guys read the Chapters 1-3.
 
 [1]: http://blog.ploeh.dk/
 [2]: http://blog.cleancoder.com/uncle-bob/2017/07/11/PragmaticFunctionalProgramming.html
@@ -127,3 +129,4 @@ With that if you don't understand what I've just outlined here, then I suggest y
 [6]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 [7]: https://stackoverflow.com/questions/218025/what-is-the-difference-between-currying-and-partial-application
 [8]: https://ramdajs.com/
+[9]: https://en.wikipedia.org/wiki/Functional_programming
