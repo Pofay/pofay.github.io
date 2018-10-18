@@ -4,7 +4,7 @@ title: Using NodeJS to display the time in an LCD using a Raspberry Pi
 tags: [rpi, javascript]
 ---
 
-As mentioned in the title, this post will cover how to use Javascript with [RxJS][1] to display the current time in the format of `h:mm:ss a` through an [16x2 LCD Display][2] with a [Raspberry Pi 3][3].
+As mentioned in the title, this post will cover how to use NodeJS to display the current time in the format of `h:mm:ss a` through an [16x2 LCD Display][2] with a [Raspberry Pi 3][3].
 
 This was the result of what I made:
 
