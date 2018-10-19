@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using NodeJS to display the time in an LCD using a Raspberry Pi
+title: Using NodeJS and Raspberry Pi to display the current time in an LCD 
 tags: [rpi, javascript]
 ---
 
@@ -26,7 +26,7 @@ In order to follow along with this tutorial you will need the following:
 * Assorted Jumper Wires 
 * 10k ohm potentiometer
 * 220 ohm resistor 
-* Any HD44780 Compatible LCD Mine is [this][this]
+* Any HD44780 Compatible LCD. Mine is [this][this]
 * Breadboard
 
 *Optional*:
@@ -41,11 +41,11 @@ In order to follow along with this tutorial you will need the following:
 
 ![Schematic Diagram](/assets/images/schematic-lcd.png)
 
-This diagram only has a minor difference from the [Adafruit Tutorial][adafruit-tutorial]. 
+This diagram only has a minor difference from the [Adafruit Schematic on the Subject][adafruit-tutorial]. It has a 220 ohm resistor through the anode since the lcd I've used doesn't have builtin resistors.
 
-Since **their LCDs have builtin resistors** they didn't need to have a 220 ohm resistor to dampen the voltage towards the Anode.
+> Please refer to the [Adafruit Schematic][adafruit-tutorial] for the correct schematic incase I've got this one wrong.
 
-## Initial Setup of Code
+## Code
 
 Run the following commands using your terminal or command-line:
 
@@ -56,6 +56,8 @@ Run the following commands using your terminal or command-line:
 Run through the npm prompts and then install the [lcd][lcd-package] and [moment][moment] package using npm:
 
     npm install lcd moment
+
+The [lcd][lcd-package] allows you to have a high-level API in controlling the LCD in NodeJS through the Raspberry Pi while [moment][moment] is used for better date and time formatting.
 
 Then create your `lcd.js` file with the following contents in it:
 
@@ -77,11 +79,15 @@ An example of Displaying an extra line to the LCD:
 
 {% gist e2fb9c21da4fbfee5fdddc983b1bc104 %}
 
-> The Api of the lcd package does not do an automatic newline unlike the [Adafruit Python Library][adafruit-python]. That's why you have to set the cursor again and due to the nature of callbacks in Node it has to be inside the first print method to work. 
+> The Api of the lcd package does not do an automatic newline unlike the [Adafruit Python Library][adafruit-python]. If you miss out on putting the next `setCursor` and `print` in the previous print callback it won't be displayed on the lcd since the internal implementation of the module does not write if the given value can be overwritten. See this [test][test] for more info.
 
 And the Output:
 
 ![Double Line LCD](/assets/images/two-lines-lcd.JPG)
+
+There are still alot more things you can do with this. You can replace the displayed text or make it scroll along the lcd. 
+
+I hope you have learned something today and happy tinkering.
 
 [1]: https://rxjs-dev.firebaseapp.com/
 [2]: https://www.amazon.com/TC1602A-09T-Compatible-Backlight-Adafruit-Raspberry/dp/B07BV14Y4D?SubscriptionId=AKIAILSHYYTFIVPWUY6Q&tag=duckduckgo-d-20&linkCode=xm2&camp=2025&creative=165953&creativeASIN=B07BV14Y4D
@@ -95,3 +101,4 @@ And the Output:
 [nodejs]: https://nodejs.org/en/
 [adafruit-python]: https://github.com/adafruit/Adafruit_Python_CharLCD
 [this]: https://www.buydisplay.com/default/character-16x2-blue-lcd-display-module-hd44780-white-on-blue
+[test]: https://github.com/fivdi/lcd/blob/master/test/print-large-strings.js
