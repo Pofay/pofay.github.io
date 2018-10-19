@@ -26,6 +26,7 @@ In order to follow along with this tutorial you will need the following:
 * Assorted Jumper Wires 
 * 10k ohm potentiometer
 * 220 ohm resistor 
+* Any HD44780 Compatible LCD Mine is [this][this]
 * Breadboard
 
 *Optional*:
@@ -93,3 +94,4 @@ And the Output:
 [8x1-display]: https://www.amazon.com/8x1-Character-LCD-STN-Blue/dp/B01GK6YJOU
 [nodejs]: https://nodejs.org/en/
 [adafruit-python]: https://github.com/adafruit/Adafruit_Python_CharLCD
+[this]: https://www.buydisplay.com/default/character-16x2-blue-lcd-display-module-hd44780-white-on-blue
