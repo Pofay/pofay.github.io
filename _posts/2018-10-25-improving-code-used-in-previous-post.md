@@ -83,7 +83,7 @@ It does fall short when you want to display two lines. You have to put the secon
 
 {% gist 7eb3c2ff2249f1f4b9126f80ce6bb45f %}
 
-Because of how the lcd's API is designed. Once you call `setCursor()` it **clears up the lcd display** and was designed to be like that for optimization purposes.
+Because of how the lcd's API is designed. Once you call `setCursor()` it **clears up the lcd display asynchronously** and was designed to be like that for optimization purposes. See this [test][test] for more information.
 
 So right now I'm looking to transfer to a Framework called [Johnny Five][johnny-five] since its APIs are more high level than the ones provided in [lcd][lcd].
 
@@ -103,3 +103,4 @@ So right now I'm looking to transfer to a Framework called [Johnny Five][johnny-
 [ho-func]: https://en.wikipedia.org/wiki/Higher-order_function
 [lcd]: https://github.com/fivdi/lcd
 [lcd-module]: https://github.com/fivdi/lcd/blob/master/lcd.js
+[test]: https://github.com/fivdi/lcd/blob/master/test/print-large-strings.js
