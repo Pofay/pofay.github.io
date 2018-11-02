@@ -21,7 +21,7 @@ And The Schematic which is from the [pigpio][pigpio] setup:
 
 ![HCSR04 Graphical Schematic](/assets/images/distance-hc-sr04.png)
 
-### Initial Setup for Code
+## Initial Setup for Code
 
 **This should be done in you Raspberry Pi**
 
@@ -117,7 +117,7 @@ Or
 
 ![web-action](/assets/images/web-action.gif)
 
-### The Parking Sensor Setup
+## The Parking Sensor Setup
 
 **Now back to your Raspberry Pi in this Setup**
 
@@ -186,7 +186,7 @@ The full code:
 
 **If you've got it right so far placing an object in front of the sensor (approximately 7 cm) will now cause the div element to turn red. Otherwise its green.**
 
-### Some Tips
+## Some Tips
 
 This setup is nice and all, but the sensor keeps on *sending put requests every second*. Although this might just be one example if you've got many requests going through the API then there might be performance drawbacks.
 
