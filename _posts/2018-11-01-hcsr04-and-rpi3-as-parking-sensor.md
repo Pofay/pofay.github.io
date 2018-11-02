@@ -119,7 +119,7 @@ Or
 
 ### The Parking Sensor Setup
 
-**Now back your Raspberry Pi in this Setup**
+**Now back to your Raspberry Pi in this Setup**
 
 The Scenario:
 
