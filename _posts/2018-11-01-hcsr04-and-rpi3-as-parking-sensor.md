@@ -94,7 +94,7 @@ For Linux install mongodb through your terminal:
 
 For Windows follow this [tutorial][tutorial-mongodb] to setup mongodb
 
-After Installation clone this [code][github]. `cd` to it and run the following:
+After Installation clone this [code][github], `cd` to it, run `npm run seed` and `npm start`
 
     git clone https://github.com/Pofay/parking-sensor-example-server.git
     cd parking-sensor-example-server
