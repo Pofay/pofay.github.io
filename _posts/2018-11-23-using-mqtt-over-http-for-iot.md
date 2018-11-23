@@ -22,7 +22,9 @@ I'm still in the process of learning what more the protocol can offer.
 
 ## Architectural Differences Between HTTP vs MQTT
 
-[http](/assets/images/http.png)
+### HTTP
+
+![http](/assets/images/http.png)
 
 HTTP is based around a client/server architecture.
 
@@ -32,7 +34,9 @@ The client might issue a GET, POST, PUT, PATCH, DELETE while the server may resp
 
 The Data that is associated with a request and a response might be a JSON, XML, YAML, HTML or some other format.
 
-[mqtt](/assets/images/mqtt.png)
+### MQTT 
+
+![mqtt](/assets/images/mqtt.png)
 
 MQTT on the hand is based on Brokers, Publishers and Subscribers since it builds upon the [publish-subscribe pattern][pub-sub]. 
 
