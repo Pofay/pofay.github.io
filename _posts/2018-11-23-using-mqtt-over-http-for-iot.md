@@ -30,7 +30,7 @@ HTTP is based around a client/server architecture.
 
 The client issues a request to a resource to the server and the server responds to that request with the appropriate resource data.
 
-The client might issue a GET, POST, PUT, PATCH, DELETE while the server may respond with a number of [Status Codes][status-codes] for each type of request with or without the associated data.
+The client might issue a *GET, POST, PUT, PATCH, DELETE* while the server may respond with a number of [Status Codes][status-codes] for each type of request with or without the associated data.
 
 The Data that is associated with a request and a response might be a JSON, XML, YAML, HTML or some other format.
 
@@ -46,11 +46,11 @@ Publishers publish a message with a signature of `{ topic, messageContent }` and
 
 Whenever a Publisher publishes a `topic` that a Subscriber is subscribing it will receive the message.
 
-You can think of it as like chat-rooms wherein you only receive messages from rooms you are in.
+**You can think of it as like chat-rooms wherein you only receive messages from rooms you are in.**
 
-The data that flows in MQTT are only Strings or StringBuffers.
+*The data that flows in MQTT are only Strings or StringBuffers.*
 
-That means a format like JSON needs to be stringified first before being published and needs to be parsed back to JSON on receiving.
+That means a format like *JSON needs to be stringified* first before being published and needs to be *parsed back to JSON* on receiving.
 
 Connections in MQTT are long-lasting like [WebSockets][websocket].
 
