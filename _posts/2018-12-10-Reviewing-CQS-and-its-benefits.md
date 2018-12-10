@@ -4,7 +4,7 @@ title: "Reviewing Command-Query Separation and its benefits"
 tags: [programming-principles, review]
 ---
 
-## The Principle 
+### The Principle 
 
 [Command-Query Separation][CQS] has long been a guiding principle for me in whatever paradigm I'm in since currently I'm working and learning software on my own.
 
@@ -24,7 +24,7 @@ Side-Effects are but are not limited to:
 
 The main theme here is that **when you perform a command (side-effecting function) the current state of the system is changed.**
 
-## Background - From a Static Type Langauge Perspective
+### Background - From a Static Type Langauge Perspective
 
 Back when I was programming in [C#][c#] and [Java][java] my rule of thumb for this principle is based off of [Mark Seemann's Encapsulation and SOLID course][pluralsight-course]:
 
@@ -43,11 +43,15 @@ When reading Java code that adheres to the principle:
 
 Through the **method signature and the name** You would know what method performs a **command** and what doesn't.
 
+`public void broadcast(String topic, String message)` here is the command since its signature is `void`.
+
+`public List<String> getSentMessages()` is the query since it returns something `List<String>`.
+
 The goodness in this is that you no longer need to read the entirety of the method's body in order to know if it changes system state or not. [Vladimir Khorikov][vlad-khov] calls this trait **method signature honesty**.
 
 Also with proper naming conventions you are well on your way to writing [self-Documenting Code][self-documenting code] thereby making your code easier to understand and maintain.
 
-## On to Dynamic Languages
+### On to Dynamic Languages
 
 Command-Query Separation is very clear when working with Languages with a [static type system][static-type] like Java or C# but how do we apply this with Dynamic Languages like say Javascript?
 
@@ -70,7 +74,7 @@ I say hopefully because some module functions in JS actually do alot of side-eff
 
 As long as that JS code is designed with CQS in mind then you can assume it so.
 
-## End
+### End
 
 This principle has its own shortcomings in terms of implementation especially in regards to [threading][threading-drawbacks] and when doing error-handling. This area will be covered in the next post.
 
