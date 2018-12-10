@@ -22,7 +22,9 @@ Side-Effects are but are not limited to:
 * Perform IO (Console.print, Console.read, HTTP, MQTT, Database Queries and Transactions)
 * Logging Messages in a File
 
-The main theme here is that **when you perform a command (side-effecting function) the current state of the system is changed.**
+The main point of the principle is this:
+
+> **Segregate side-effecting functions from query functions.**
 
 ### Background - From a Static Type Langauge Perspective
 
@@ -43,13 +45,23 @@ When reading Java code that adheres to the principle:
 
 Through the **method signature and the name** You would know what method performs a **command** and what doesn't.
 
-`public void broadcast(String topic, String message)` here is the command since its signature is `void`.
+`public void broadcast(String topic, String message)` here is the **command** since its signature is `void`.
 
-`public List<String> getSentMessages()` is the query since it returns something `List<String>`.
+`public List<String> getSentMessages()` is the **query** since it returns something `List<String>`.
 
-The goodness in this is that you no longer need to read the entirety of the method's body in order to know if it changes system state or not. [Vladimir Khorikov][vlad-khov] calls this trait **method signature honesty**.
+### The Benefits 
 
-Also with proper naming conventions you are well on your way to writing [self-Documenting Code][self-documenting code] thereby making your code easier to understand and maintain.
+As stated by alot of experienced software developers and even tech-giants like Microsoft:
+
+> **Code is read much more often than it is written**
+
+And it is important to reduce the amount of time to comprehend a line of code since we're getting paid to write or maintain code.
+
+CQS is one of many principles that help with that.
+
+CQS helps through proper signature segragation so that you can infer what the method does without actually having to peer into its implementation.
+
+Alongside proper naming and the [SOLID][solid] principles it will enable writing [self-documenting code][self-documenting code] since the signature communicates what the function or method does.
 
 ### On to Dynamic Languages
 
@@ -83,7 +95,6 @@ This principle also requires agreement and enforcement when your working on a te
 [static-type]: https://en.wikipedia.org/wiki/Type_system#Static_type_checking
 [threading-drawbacks]: https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Drawbacks
 [self-documenting code]: https://en.wikipedia.org/wiki/Self-documenting_code
-[vlad-khov]: https://enterprisecraftsmanship.com/2016/04/21/what-is-functional-programming/
 [c#]: https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language)
 [pluralsight-course]: https://www.pluralsight.com/courses/encapsulation-solid
