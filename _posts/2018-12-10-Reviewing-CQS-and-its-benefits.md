@@ -94,6 +94,7 @@ This principle also requires agreement and enforcement when your working on a te
 
 [static-type]: https://en.wikipedia.org/wiki/Type_system#Static_type_checking
 [threading-drawbacks]: https://en.wikipedia.org/wiki/Command%E2%80%93query_separation#Drawbacks
+[solid]: https://en.wikipedia.org/wiki/SOLID
 [self-documenting code]: https://en.wikipedia.org/wiki/Self-documenting_code
 [c#]: https://en.wikipedia.org/wiki/C_Sharp_(programming_language)
 [java]: https://en.wikipedia.org/wiki/Java_(programming_language)
