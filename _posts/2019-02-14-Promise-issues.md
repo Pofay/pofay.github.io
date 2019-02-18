@@ -13,13 +13,15 @@ And reinforcing what the article said:  **It never resolves.**
 
 ## The Points of my issues on Promises
 
-In this [blog post][broken-promises] the Author points out a lot problems that Promises have (read the **summary on Promises** which details alot of it).
+In this [blog post][broken-promises] the [Author][@avaq] points out a lot problems that Promises have (read the **summary on Promises** which details alot of it).
 
 I'm very particular about Point 1 and 3 and I'm going to outline them.
 
 ## The First Point: Eager Promises
 
-> Promises are eager, which sets them up for a variety of issues as well as making them useless for side-effect management.
+> Promises are eager, which sets them up for a variety of issues as well as making them useless for side-effect management. 
+> [@avaq][@avaq]
+
 
 Promises are eager because the moment you call a `.then()` on a Promise it's going to execute.
 
@@ -31,13 +33,14 @@ In short the moment you invoke a Promise returning function the state of the sys
 
 ## The Third Point: Mixing Exceptions with Expected Failures
 
-> Promises mix exceptions with expected failures.
+> Promises mix exceptions with expected failures. 
+> [@avaq][@avaq]
 
 The things that I've learned about **genuine exceptions**:
 
 * It represents a real bug in your system (NPEs, undefined properties, etc)
 * Generally you don't know how to handle them (causes your APIs for example to return a 500 response unintentionally) and **when they happen the process crashes**.
-* [Try-catched at the highest level or at the lowest level][try-catch boundary]
+* [Try-catched at the highest level or at the lowest level][try-catch-boundary]
 
 And The things I've learned about **fake exceptions**:
 
@@ -57,7 +60,7 @@ Because `Promise.catch()` mushes them together and you **might handle an geniune
 
 What I generally do instead is to utilize [Folktale's Result container for such things][folktale-result] when dealing with expected errors:
 
-    new Promise(someSideEffectThayMayFail()).then(Result.Error, Result.Ok)
+    new Promise(someSideEffectThatMayFail()).then(Result.Error, Result.Ok)
 
 ### Conclusion
 
@@ -73,3 +76,4 @@ And those are my issues on Promises. The only thing redeemable about them is tha
 [try-catcy-boundary]:https://enterprisecraftsmanship.com/2015/02/26/exceptions-for-flow-control-in-c/
 [nodejs]:https://nodejs.org/en/
 [folktale-result]:https://folktale.origamitower.com/docs/v2.3.0/migrating/from-data.either/
+[@avaq]:https://medium.com/@avaq
