@@ -29,7 +29,7 @@ Although the type-hints are capable of showing you if a function returns a `Prom
 
 In order for you to know what the heck happened in that function you need to peer into its implementation.
 
-In short the moment you invoke a Promise returning function the state of the system may or may have changed.
+**The moment you invoke a Promise returning function the state of the system may have changed**
 
 ## The Third Point: Mixing Exceptions with Expected Failures
 
