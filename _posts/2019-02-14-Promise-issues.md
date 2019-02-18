@@ -66,14 +66,14 @@ What I generally do instead is to utilize [Folktale's Result container for such 
 
 > TLDR: 
   * Promises just unwind side-effects when calling its `.then()` making it not safe to call every time(its not idempotent)
-  * Don't use exceptions on expected errors, but use some sort of Result Container like [folktale's][folktale-result] to represent them.
+  * Don't use exceptions on expected errors and wrap it in a Promise, instead use some sort of Result Container like [folktale's][folktale-result] to represent them and wrap it in a Promise.
 
 And those are my issues on Promises. The only thing redeemable about them is that they enable `async/await` which leads to another issue on [function colors][function-colors].
 
 [exceptions-are-gotos]:http://xahlee.info/comp/why_i_hate_exceptions.html
 [broken-promises]:https://medium.com/@avaq/broken-promises-2ae92780f33
 [function-colors]:http://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/
-[try-catcy-boundary]:https://enterprisecraftsmanship.com/2015/02/26/exceptions-for-flow-control-in-c/
+[try-catch-boundary]:https://enterprisecraftsmanship.com/2015/02/26/exceptions-for-flow-control-in-c/
 [nodejs]:https://nodejs.org/en/
 [folktale-result]:https://folktale.origamitower.com/docs/v2.3.0/migrating/from-data.either/
 [@avaq]:https://medium.com/@avaq
